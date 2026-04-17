@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "278559617651",
+    "project_id": "cityupdatesapp-1d936",
+    "storage_bucket": "cityupdatesapp-1d936.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278559617651:android:25c8ca62617626c6b27006",
+        "android_client_info": {
+          "package_name": "com.sasha.cityupdates"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFnqyiSste7uBkOrLlMlCCQ7dSdww6RWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

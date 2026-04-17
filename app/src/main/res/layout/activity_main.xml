@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:paddingTop="32dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1565C0"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="City Updates"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤 Profile"
+            android:textColor="#1565C0"
+            android:backgroundTint="#FFFFFF"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/categoryFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textSize="12sp"
+                android:backgroundTint="#1565C0"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💧 Water"
+                android:textSize="12sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚡ Power"
+                android:textSize="12sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnRoads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚧 Roads"
+                android:textSize="12sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnFloods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌊 Floods"
+                android:textSize="12sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎉 Events"
+                android:textSize="12sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#1565C0"
+                android:layout_marginEnd="4dp"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#1565C0"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+</LinearLayout>
