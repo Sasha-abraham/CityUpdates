@@ -1,108 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5"
-    android:paddingTop="32dp">
+    android:background="#0D1B2A"
+    android:paddingTop="36dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#1565C0"
-        android:padding="16dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
         android:gravity="center_vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="City Updates"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"/>
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City Updates"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tvUserArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#4FC3F7"/>
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/btnProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="👤 Profile"
-            android:textColor="#1565C0"
-            android:backgroundTint="#FFFFFF"/>
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="👤"
+            android:textSize="16sp"
+            android:padding="0dp"
+            android:backgroundTint="#152232"/>
 
     </LinearLayout>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/categoryFilter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnAll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All"
-                android:textSize="12sp"
-                android:backgroundTint="#1565C0"
-                android:textColor="#FFFFFF"
-                android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnAll"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="All Areas" android:textSize="11sp"
+                android:textColor="#0D1B2A" android:backgroundTint="#4FC3F7"
+                android:layout_marginEnd="6dp"/>
 
-            <Button
-                android:id="@+id/btnWater"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="💧 Water"
-                android:textSize="12sp"
-                android:backgroundTint="#FFFFFF"
-                android:textColor="#1565C0"
-                android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnKoramangala"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Koramangala" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
 
-            <Button
-                android:id="@+id/btnPower"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⚡ Power"
-                android:textSize="12sp"
-                android:backgroundTint="#FFFFFF"
-                android:textColor="#1565C0"
-                android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnIndiranagar"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Indiranagar" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
 
-            <Button
-                android:id="@+id/btnRoads"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🚧 Roads"
-                android:textSize="12sp"
-                android:backgroundTint="#FFFFFF"
-                android:textColor="#1565C0"
-                android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnWhitefield"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Whitefield" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
 
-            <Button
-                android:id="@+id/btnFloods"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🌊 Floods"
-                android:textSize="12sp"
-                android:backgroundTint="#FFFFFF"
-                android:textColor="#1565C0"
-                android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnJayanagar"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Jayanagar" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
 
-            <Button
-                android:id="@+id/btnEvents"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🎉 Events"
-                android:textSize="12sp"
-                android:backgroundTint="#FFFFFF"
-                android:textColor="#1565C0"
-                android:layout_marginEnd="4dp"/>
+            <Button android:id="@+id/btnMalleshwaram"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Malleshwaram" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
+
+            <Button android:id="@+id/btnHSR"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="HSR Layout" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
+
+            <Button android:id="@+id/btnElectronic"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Electronic City" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
+
+            <Button android:id="@+id/btnHebbal"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Hebbal" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
+
+            <Button android:id="@+id/btnRajajinagar"
+                android:layout_width="wrap_content" android:layout_height="34dp"
+                android:text="Rajajinagar" android:textSize="11sp"
+                android:textColor="#4FC3F7" android:backgroundTint="#152232"
+                android:layout_marginEnd="6dp"/>
 
         </LinearLayout>
 
@@ -113,16 +132,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="8dp"/>
+        android:paddingBottom="16dp"
+        android:clipToPadding="false"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabPost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_margin="20dp"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#1565C0"
-        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+        app:backgroundTint="#4FC3F7"
+        app:tint="#0D1B2A"/>
 
 </LinearLayout>

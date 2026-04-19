@@ -9,6 +9,7 @@ import com.sasha.cityupdates.R
 
 class PostUpdateActivity : AppCompatActivity() {
 
+    private val urgencyLevels = listOf("Low", "Medium", "High", "Critical")
     private lateinit var auth: FirebaseAuth
     private lateinit var db: FirebaseFirestore
 
@@ -35,6 +36,11 @@ class PostUpdateActivity : AppCompatActivity() {
         val spinnerCategory = findViewById<Spinner>(R.id.spinnerCategory)
         val spinnerArea = findViewById<Spinner>(R.id.spinnerArea)
         val btnSubmit = findViewById<Button>(R.id.btnSubmit)
+        val spinnerUrgency = findViewById<Spinner>(R.id.spinnerUrgency)
+        val urgencyAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, urgencyLevels)
+        urgencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerUrgency.adapter = urgencyAdapter
+
 
         val categoryAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categories)
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -49,6 +55,8 @@ class PostUpdateActivity : AppCompatActivity() {
             val description = etDescription.text.toString().trim()
             val category = spinnerCategory.selectedItem.toString()
             val area = spinnerArea.selectedItem.toString()
+            val urgency = spinnerUrgency.selectedItem.toString()
+
 
             if (title.isEmpty() || description.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
@@ -79,7 +87,8 @@ class PostUpdateActivity : AppCompatActivity() {
                         "area" to area,
                         "postedBy" to postedBy,
                         "userId" to userId,
-                        "timestamp" to System.currentTimeMillis()
+                        "timestamp" to System.currentTimeMillis(),
+                        "urgency" to urgency
                     )
 
                     docRef.set(update)

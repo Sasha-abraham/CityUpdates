@@ -4,21 +4,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#1565C0"
-    android:paddingTop="32dp">
+    android:background="#0D1B2A">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="🏙️"
-        android:textSize="72sp"
-        android:layout_marginBottom="16dp"/>
+        android:textSize="80sp"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="City Updates"
-        android:textSize="36sp"
+        android:textSize="38sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="8dp"/>
@@ -26,8 +25,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stay informed about your city"
-        android:textSize="14sp"
-        android:textColor="#BBDEFB"/>
+        android:text="Stay informed. Stay connected."
+        android:textSize="15sp"
+        android:textColor="#4FC3F7"/>
 
 </LinearLayout>

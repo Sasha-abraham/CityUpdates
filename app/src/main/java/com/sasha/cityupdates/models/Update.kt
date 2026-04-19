@@ -8,5 +8,8 @@ data class Update(
     val area: String = "",
     val postedBy: String = "",
     val userId: String = "",
-    val timestamp: Long = 0L
+    val timestamp: Long = 0L,
+    val urgency: String = "Low",
+    val flagCount: Int = 0,
+    val flaggedBy: List<String> = emptyList()
 )

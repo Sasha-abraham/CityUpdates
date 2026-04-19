@@ -2,101 +2,139 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="#0D1B2A">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:paddingTop="32dp">
+        android:paddingTop="48dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Post an Update"
-            android:textSize="24sp"
+            android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="#1565C0"
-            android:layout_marginBottom="24dp"/>
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="4dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
+            android:text="Let your community know"
             android:textSize="14sp"
-            android:textColor="#424242"
-            android:layout_marginBottom="4dp"/>
+            android:textColor="#7B9EBE"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#7B9EBE"
+            android:layout_marginBottom="6dp"/>
 
         <EditText
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
             android:hint="e.g. Water supply cut in Koramangala"
-            android:background="@android:drawable/edit_text"
-            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#557A95"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/input_bg"
             android:layout_marginBottom="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category"
-            android:textSize="14sp"
-            android:textColor="#424242"
-            android:layout_marginBottom="4dp"/>
+            android:text="CATEGORY"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#7B9EBE"
+            android:layout_marginBottom="6dp"/>
 
         <Spinner
             android:id="@+id/spinnerCategory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:padding="12dp"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
             android:layout_marginBottom="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Area"
-            android:textSize="14sp"
-            android:textColor="#424242"
-            android:layout_marginBottom="4dp"/>
+            android:text="AREA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#7B9EBE"
+            android:layout_marginBottom="6dp"/>
 
         <Spinner
             android:id="@+id/spinnerArea"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:padding="12dp"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
             android:layout_marginBottom="16dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:textSize="14sp"
-            android:textColor="#424242"
-            android:layout_marginBottom="4dp"/>
+            android:text="URGENCY LEVEL"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#7B9EBE"
+            android:layout_marginBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerUrgency"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DESCRIPTION"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="#7B9EBE"
+            android:layout_marginBottom="6dp"/>
 
         <EditText
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Describe the issue or event in detail..."
-            android:background="@android:drawable/edit_text"
-            android:padding="12dp"
-            android:minLines="4"
+            android:hint="Describe the issue in detail..."
+            android:textColor="#FFFFFF"
+            android:textColorHint="#557A95"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/input_bg"
+            android:minLines="5"
             android:gravity="top"
             android:inputType="textMultiLine"
-            android:layout_marginBottom="24dp"/>
+            android:layout_marginBottom="28dp"/>
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="52dp"
             android:text="Post Update"
-            android:backgroundTint="#1565C0"
-            android:textColor="#FFFFFF"/>
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#0D1B2A"
+            android:backgroundTint="#4FC3F7"/>
 
     </LinearLayout>
-
 </ScrollView>

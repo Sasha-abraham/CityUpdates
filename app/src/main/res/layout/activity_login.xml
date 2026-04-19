@@ -3,63 +3,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#0D1B2A"
     android:gravity="center"
-    android:padding="32dp"
-    android:background="#F5F5F5"
-    android:paddingTop="32dp">
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🏙️"
+        android:textSize="64sp"
+        android:layout_marginBottom="12dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="City Updates"
-        android:textSize="32sp"
+        android:textSize="34sp"
         android:textStyle="bold"
-        android:textColor="#1565C0"
-        android:layout_marginBottom="8dp"/>
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="4dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stay informed about your city"
+        android:text="Stay informed. Stay connected."
         android:textSize="14sp"
-        android:textColor="#757575"
-        android:layout_marginBottom="40dp"/>
+        android:textColor="#7B9EBE"
+        android:layout_marginBottom="48dp"/>
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
+        android:layout_height="52dp"
+        android:hint="Email address"
         android:inputType="textEmailAddress"
-        android:background="@android:drawable/edit_text"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#FFFFFF"
+        android:textColorHint="#557A95"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/input_bg"
+        android:layout_marginBottom="12dp"/>
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:background="@android:drawable/edit_text"
-        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#557A95"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/input_bg"
         android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:text="Login"
-        android:backgroundTint="#1565C0"
-        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#0D1B2A"
+        android:backgroundTint="#4FC3F7"
         android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:text="Create Account"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="#1565C0"/>
+        android:textSize="16sp"
+        android:textColor="#4FC3F7"
+        android:backgroundTint="#1A2D3E"/>
 
 </LinearLayout>
