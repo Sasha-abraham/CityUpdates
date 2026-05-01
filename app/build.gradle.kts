@@ -51,4 +51,5 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:26.2.0")
     implementation("com.google.firebase:firebase-storage:22.0.1")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
 }

@@ -7,6 +7,7 @@
     android:background="#0D1B2A"
     android:paddingTop="36dp">
 
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,6 +41,16 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btnChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="💬"
+            android:textSize="16sp"
+            android:padding="0dp"
+            android:backgroundTint="#152232"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
             android:id="@+id/btnProfile"
             android:layout_width="40dp"
             android:layout_height="40dp"
@@ -50,12 +61,13 @@
 
     </LinearLayout>
 
+    <!-- Area Filter Buttons -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:paddingBottom="12dp"
+        android:paddingBottom="8dp"
         android:scrollbars="none">
 
         <LinearLayout
@@ -127,6 +139,24 @@
 
     </HorizontalScrollView>
 
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="🔍 Search updates..."
+        android:textColor="#FFFFFF"
+        android:textColorHint="#557A95"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/input_bg"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:inputType="text"/>
+
+    <!-- Feed -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
@@ -135,6 +165,7 @@
         android:paddingBottom="16dp"
         android:clipToPadding="false"/>
 
+    <!-- FAB -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabPost"
         android:layout_width="wrap_content"

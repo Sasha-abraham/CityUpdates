@@ -11,5 +11,9 @@ data class Update(
     val timestamp: Long = 0L,
     val urgency: String = "Low",
     val flagCount: Int = 0,
-    val flaggedBy: List<String> = emptyList()
+    val flaggedBy: List<String> = emptyList(),
+    val upvoteCount: Int = 0,
+    val upvotedBy: List<String> = emptyList(),
+    val isResolved: Boolean = false,
+    val commentCount: Int = 0
 )

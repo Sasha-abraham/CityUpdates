@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CityUpdates">
         <activity
+            android:name=".activities.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.SettingsActivity"
             android:exported="false" />
         <activity

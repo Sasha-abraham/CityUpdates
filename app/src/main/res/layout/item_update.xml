@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="12dp">
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:id="@+id/tvCategory"
@@ -34,6 +34,22 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tvResolved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✅ Resolved"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:background="#4CAF50"
+            android:layout_marginEnd="6dp"
+            android:visibility="gone"/>
 
         <TextView
             android:id="@+id/tvUrgency"
@@ -89,12 +105,28 @@
             android:textStyle="bold"/>
 
         <TextView
+            android:id="@+id/tvUpvoteCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#4FC3F7"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tvCommentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#7B9EBE"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
             android:id="@+id/tvFlagCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="11sp"
             android:textColor="#FF7043"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="8dp"/>
 
         <TextView
             android:id="@+id/tvPostedBy"

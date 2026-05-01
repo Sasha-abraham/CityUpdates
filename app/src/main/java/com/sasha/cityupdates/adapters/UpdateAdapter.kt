@@ -26,6 +26,9 @@ class UpdateAdapter(private val updates: MutableList<Update>) :
         val tvArea: TextView = itemView.findViewById(R.id.tvArea)
         val tvPostedBy: TextView = itemView.findViewById(R.id.tvPostedBy)
         val tvFlagCount: TextView = itemView.findViewById(R.id.tvFlagCount)
+        val tvUpvoteCount: TextView = itemView.findViewById(R.id.tvUpvoteCount)
+        val tvCommentCount: TextView = itemView.findViewById(R.id.tvCommentCount)
+        val tvResolved: TextView = itemView.findViewById(R.id.tvResolved)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UpdateViewHolder {
@@ -41,8 +44,13 @@ class UpdateAdapter(private val updates: MutableList<Update>) :
         holder.tvDescription.text = update.description
         holder.tvArea.text = "📍 ${update.area}"
         holder.tvPostedBy.text = "by ${update.postedBy}"
+        holder.tvUpvoteCount.text = "👍 ${update.upvoteCount}"
+        holder.tvCommentCount.text = "💬 ${update.commentCount}"
 
-        // Urgency color coding
+        // Resolved badge
+        holder.tvResolved.visibility = if (update.isResolved) View.VISIBLE else View.GONE
+
+        // Urgency color
         val (urgencyColor, urgencyLabel) = when (update.urgency) {
             "Critical" -> Pair("#F44336", "🔴 Critical")
             "High"     -> Pair("#FF9800", "🟠 High")
