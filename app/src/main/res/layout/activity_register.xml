@@ -85,6 +85,15 @@
             android:layout_marginBottom="28dp"/>
 
         <Button
+            android:id="@+id/btnDetectLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="📍 Detect My Location"
+            android:textColor="#0D1B2A"
+            android:backgroundTint="#4FC3F7"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="52dp"

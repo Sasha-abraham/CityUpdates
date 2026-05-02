@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0D1B2A">
+    android:background="#0D1B2A"
+    android:fitsSystemWindows="true">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,7 +69,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#152232"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:gravity="center_vertical">
 
         <EditText
             android:id="@+id/etChatInput"
@@ -81,11 +83,12 @@
             android:background="@drawable/input_bg"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_marginEnd="8dp"
             android:inputType="text"
-            android:maxLines="3"/>
+            android:maxLines="3"
+            android:imeOptions="actionSend"/>
 
         <Button
             android:id="@+id/btnSendChat"

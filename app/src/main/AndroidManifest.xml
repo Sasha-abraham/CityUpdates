@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,31 +15,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CityUpdates">
-        <activity
-            android:name=".activities.ChatActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.SettingsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.UpdateDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.ProfileActivity"
-            android:exported="false" />
+
         <activity
             android:name=".activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.LoginActivity" />
+
+        <activity android:name=".activities.LoginActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".activities.RegisterActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
         <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.PostUpdateActivity" />
+
+        <activity android:name=".activities.PostUpdateActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".activities.ProfileActivity" />
+
+        <activity android:name=".activities.UpdateDetailActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+
+        <activity android:name=".activities.SettingsActivity" />
+
+        <activity android:name=".activities.ChatActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+
     </application>
 
 </manifest>

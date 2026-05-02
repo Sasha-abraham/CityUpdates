@@ -8,6 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sasha.cityupdates.R
 import com.sasha.cityupdates.models.Update
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class UpdateAdapter(private val updates: MutableList<Update>) :
     RecyclerView.Adapter<UpdateAdapter.UpdateViewHolder>() {
@@ -29,6 +32,8 @@ class UpdateAdapter(private val updates: MutableList<Update>) :
         val tvUpvoteCount: TextView = itemView.findViewById(R.id.tvUpvoteCount)
         val tvCommentCount: TextView = itemView.findViewById(R.id.tvCommentCount)
         val tvResolved: TextView = itemView.findViewById(R.id.tvResolved)
+
+        val tvTimestamp: TextView = itemView.findViewById(R.id.tvTimestamp)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UpdateViewHolder {
@@ -46,6 +51,9 @@ class UpdateAdapter(private val updates: MutableList<Update>) :
         holder.tvPostedBy.text = "by ${update.postedBy}"
         holder.tvUpvoteCount.text = "👍 ${update.upvoteCount}"
         holder.tvCommentCount.text = "💬 ${update.commentCount}"
+
+        val sdf = SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault())
+        holder.tvTimestamp.text = sdf.format(Date(update.timestamp))
 
         // Resolved badge
         holder.tvResolved.visibility = if (update.isResolved) View.VISIBLE else View.GONE
